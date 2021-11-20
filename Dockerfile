@@ -18,8 +18,7 @@ RUN curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
 # RUN pip3 install --upgrade pip
-RUN pip3 install torch==1.10.0+cpu torchvision==0.11.1+cpu torchaudio==0.10.0+cpu -f https://download.pytorch.org/w
-hl/cpu/torch_stable.html
+RUN pip3 install torch==1.10.0+cpu torchvision==0.11.1+cpu torchaudio==0.10.0+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
 RUN pip3 install --upgrade  -r requirements.txt
 COPY . /app
 CMD [ "python3", "./app.py" ]
