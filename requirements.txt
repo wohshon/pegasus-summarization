@@ -1,0 +1,6 @@
+flask
+sentencepiece
+setuptools 
+wheel
+tensorflow
+transformers[torch]
