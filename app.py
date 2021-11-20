@@ -4,11 +4,15 @@ from transformers import PegasusTokenizer, PegasusForConditionalGeneration, Pega
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 # modelNames = ['google/pegasus-xsum','google/pegasus-multi_news','google/pegasus-cnn_dailymail','google/pegasus-newsroom','google/pegasus-wikihow']
-# break up to 2 models per cloud run service due to the size of the models
-# summarize-1 tag :xsum-multi_news
-# modelNames = ['google/pegasus-xsum','google/pegasus-multi_news']
-# summarize-2, tag :cnn_dailymail-newsroom
-modelNames = ['google/pegasus-cnn_dailymail','google/pegasus-newsroom']
+# break up to 1 models per cloud run service due to the size of the models
+# summarize-1 tag 
+modelNames = ['google/pegasus-xsum']
+# summarize-2, tag :multi_news
+# modelNames = ['google/pegasus-multi_news']
+# summarize-3 tag :cnn_dailymail
+# modelNames = ['google/pegasus-cnn_dailymail']
+# summarize-4 tag :newsroom
+# modelNames = ['google/pegasus-newsroom']
 
 # preload
 models =[]
