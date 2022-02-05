@@ -7,7 +7,7 @@ docker build -t <app name> ,
 
 docker run -d -p 8080:0880  <app name>
 
-curl -H 'Content-type: application/json' -d '{"text_payload":"<insert text here>"}' localhost:8080/summarize
+curl -H 'Content-type: application/json' -d '{"text_payload":"hello","model":"google/pegasus-cnn_dailymail"}' localhost:8080/summarize
 ```
 
 try the different summarization demos here <https://huggingface.co/model>

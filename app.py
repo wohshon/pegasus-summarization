@@ -3,10 +3,10 @@ import torch
 from transformers import PegasusTokenizer, PegasusForConditionalGeneration, PegasusConfig
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-# modelNames = ['google/pegasus-xsum','google/pegasus-multi_news','google/pegasus-cnn_dailymail','google/pegasus-newsroom','google/pegasus-wikihow']
+modelNames = ['google/pegasus-xsum','google/pegasus-multi_news','google/pegasus-cnn_dailymail','google/pegasus-newsroom','google/pegasus-wikihow']
 # break up to 1 models per cloud run service due to the size of the models
 # summarize-1 tag 
-modelNames = ['google/pegasus-xsum']
+# modelNames = ['google/pegasus-xsum']
 # summarize-2, tag :multi_news
 # modelNames = ['google/pegasus-multi_news']
 # summarize-3 tag :cnn_dailymail
